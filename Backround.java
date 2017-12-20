@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Backround
 {
@@ -10,7 +11,7 @@ public class Backround
     private Color horizonColor;
     private Color groundColor;
     private Color sunColor;
-    public Backround(int width, int height){
+    public Backround(){
         this.width = width;
         this.height = height;
         horizonColor = Color.CYAN;
@@ -21,8 +22,9 @@ public class Backround
         
     }
     
-    public void drawBackround(Graphics g)
+    public void drawBackround(Graphics g,DrawingPanel panel )
     {
+        
         
     }
 }

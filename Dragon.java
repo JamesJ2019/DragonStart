@@ -61,7 +61,7 @@ public class Dragon
     }
     public void attack (Graphics g){
         if(attack.equals("fire"))
-            drawFire(g);            
+            drawFire(g);    
     }
     private void drawFire(Graphics g){
         g.setColor(Color.RED);
