@@ -11,9 +11,12 @@ public class Dragon
     private int x;
     private int y;
     private int size;
+    private int bodyX;
+    private int bodyY;
+    private int bodyWidth;
+    private int bodyHeight;
+    private String name;
     private Color c;
-    private int health;
-    private String attack;
 
     /**
      * Default Constructor for objects of class Dragon
@@ -25,20 +28,20 @@ public class Dragon
         y = 50;
         size = 1;
         c = Color.GREEN;
-        health = 25;
-        attack = "fire";
+         bodyX = x + size * 25;
+        bodyY = y + size * 25;
+        bodyWidth = size * 60;
+        bodyHeight = size * 50;
     }
     
     /**
      * Overloaded Constructors go here
      */
-    public Dragon(int x, int y, int size, Color c, int health, String attack){
+    public Dragon(int x, int y, int size, Color c, String n){
     this.x = x;
     this.y = y;
     this.size = size;
     this.c = c;
-    this.health = health;
-    this.attack = attack;
 }
 
     /** 
@@ -59,23 +62,29 @@ public class Dragon
         g.fillRect(x + size * 85, y + size * 25, size * 30, size * 10);
         g.fillRect(x + size * -150, y + size * 130, size * 100, size * 10);
     }
-    public void attack (Graphics g){
-        if(attack.equals("fire"))
-            drawFire(g);    
+    
+    public int getBodyX(){
+        return bodyX;
     }
+    
+    public int getBodyY(){
+        return bodyY;
+    }
+    
+    public int getBodyWidth(){
+        return bodyWidth;
+    }
+    
+    public int getBodyHeight(){
+        return bodyHeight;
+    }
+    
     private void drawFire(Graphics g){
         g.setColor(Color.RED);
         for(int i = 1; i < size * 3; i++)
         g.fillOval(x + i * -30, y + size * 20, i * 25, i * 25);
     }
-    
-    /**
-     * Mutator Methods
-     */
-    
-    /**
-     * toString
-     */
+
     public String toString(){
         return "x coor: " + x + " y coord: " + y + " size: " + size;
     }

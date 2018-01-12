@@ -12,7 +12,7 @@ public class TestClass
    public static void main(String args[]){
        DrawingPanel panel = new DrawingPanel(800,800);
        Graphics g = panel.getGraphics();
-       ArrayList<Dragon> dragons = new ArrayList<Dragon>();
+       ArrayList<ScaledDragon> dragons = new ArrayList<ScaledDragon>();
        int num; 
        Scanner input = new Scanner(System.in);
     
@@ -23,14 +23,18 @@ public class TestClass
     while(num <= 0);
     
     for(int i = 1; i <= num; i++){
-        Dragon temp = new Dragon(90 * i + 25, 90 * i + 50,1 , new Color(50 * i, 50 * i, 50 * i),1, "#" + i);
+        ScaledDragon temp = new ScaledDragon(90 * i + 25, 90 * i + 50,1 , new Color(50 * i, 50 * i, 50 * i), "#" + i, Color.BLACK);
         dragons.add(temp);
     }
     
     for(int i = 0; i < dragons.size(); i++){
         dragons.get(i).drawDragon(g);
-        /*dragons.get(i).dragonSayHello(g);*/
     }
+    
+     for(int i = 0; i < dragons.size(); i++){ //Traverse ArrayList of Dragons
+           ScaledDragon temp = dragons.get(i);
+           temp.drawDragon(g);
+        }
 }
 }
 

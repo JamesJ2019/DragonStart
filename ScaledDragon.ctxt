@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ScaledDragon
+comment1.params=x\ y\ size\ c\ n\ sC
+comment1.target=ScaledDragon(int,\ int,\ int,\ java.awt.Color,\ java.lang.String,\ java.awt.Color)
+comment2.params=g
+comment2.target=void\ drawScales(java.awt.Graphics)
+comment3.params=g
+comment3.target=void\ drawDragon(java.awt.Graphics)
+numComments=4
